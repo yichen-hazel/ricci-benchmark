@@ -1,3 +1,3 @@
 
-from . import geometry, graphs, curvature, io, viz
+from . import geometry, graphs, curvature
 __all__ = ["geometry", "graphs", "curvature"]

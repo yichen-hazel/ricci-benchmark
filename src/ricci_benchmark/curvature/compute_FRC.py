@@ -38,7 +38,7 @@ def weighted_frc_edge_curvature(G: nx.Graph) -> dict:
             w_vy = max(G[v][y].get("weight", 1.0), eps)
             sum_v += 1.0 / np.sqrt(w_uv * w_vy)
 
-        F_uv = w_uv * (term_vertex - (sum_u + sum_v))
+        F_uv = (term_vertex - (sum_u + sum_v))
         F[(u, v)] = F_uv
         F[(v, u)] = F_uv
     return F
